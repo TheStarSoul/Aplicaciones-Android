@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondocelular"
+    tools:context=".EditarProductos">
+
+    <LinearLayout
+        android:id="@+id/LinearLista"
+        android:layout_width="413dp"
+        android:layout_height="207dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="7dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/ScrollEditar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/lblTituloEditar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Editar productos"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/LvListaEditar"
+            android:layout_width="match_parent"
+            android:layout_height="284dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/ScrollEditar"
+        android:layout_width="411dp"
+        android:layout_height="376dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LinearLista"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:id="@+id/LinearEditar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblIDProducto2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ID del producto:"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtIDProducto2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Ingresar ID del producto"
+                android:inputType="number"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/lblNombreProducto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre del producto:"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtNombreProducto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Ingresar nombre del producto"
+                android:inputType="textPersonName"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/lblMarcaProducto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Marca del producto:"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtMarcaProducto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Ingresar marca del producto"
+                android:inputType="textPersonName"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/lblDescripcionProducto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descripcion del producto:"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtDescripcionProducto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Ingresar descripcion del producto"
+                android:inputType="textPersonName"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/lblValorProducto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Valor C/U del producto:"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtValorProducto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Ingresar valor del producto"
+                android:inputType="number"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnEditar2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/teal_700"
+                android:onClick="EditarDatos"
+                android:text="Editar" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
